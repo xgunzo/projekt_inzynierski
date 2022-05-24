@@ -1,0 +1,67 @@
+@mixin body-default {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #4169e1;
+    font-family: "Space Mono", monospace;
+}
+
+@mixin logo {
+    display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  line-height: 50px;
+}
+
+@mixin card {
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
+    padding-bottom: 2em;
+    color: hsl(183, 100%, 15%);
+    width: 95%;
+    margin: 0 auto;
+}
+
+@mixin input {
+    margin-top: 1em;
+    padding: 1em 0;
+    width: 98%;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #dce3fd;
+}
+
+@mixin error {
+    color: red;
+    padding-left: 3em;
+    display: none;
+}
+
+@mixin select-tip {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        padding-bottom: 2em;
+        padding-top: 2em;
+}
+
+@mixin tip-grid {
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+@mixin grid-item {
+    padding: 0.5em 1em;
+    padding-top: 0.5em;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: "Space Mono", monospace;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Napiwków</title>
+    <meta name="description"
+        content="Strona zawierający prosty kalkulator, który ma na celu obliczyć wartośc napiwku biorąc pod uwagę ilość osób, z którymi siedzimy przy stole">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="logo">
+            <h1>Kalkulator<br>napiwków</h1>
+        </nav>
+        <main class="card">
+            <div id="mobile-wrapper">
+
+                <section class="bill">
+                    <h2>Rachunek</h2>
+                    <input type="number" id="bill-input" placeholder="0">
+                    <div class="placeholder">PLN</div>
+                </section>
+
+                <section class="number-of-people">
+                    <h2>Liczba osób <span id="error">Nie może być zero</span></h2>
+                    <input type="number" id="number-of-people-input" placeholder="0">
+                    <div class="placeholder"><img src="images/icon-person.svg" alt="person icon"></div>
+                </section>
+
+                <section class="select-tip">
+                    <h2>Wybierz % napiwku</h2>
+                    <div class="tip-grid">
+                        <div class="grid1 grid-hover grid-active">5%</div>
+                        <div class="grid2 grid-hover grid-active">10%</div>
+                        <div class="grid3 grid-hover grid-active">15%</div>
+                        <div class="grid4 grid-hover grid-active">25%</div>
+                        <div class="grid5 grid-hover grid-active">50%</div>
+                        <div class="grid6 grid-hover grid-active"><input type="number" id="custom-tip"
+                                placeholder="Niestandardowe"></input></div>
+                    </div>
+                </section>
+
+                <section class="tip-calculator">
+                    <div class="tip-amount">
+                        <span class="white-text">Kwota napiwku</span>
+                        <br>
+                        <span class="grey-text">/ osoba</span>
+                        <div id="tip-amount">
+                            PLN0.00
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="total">
+                        <span class="white-text">Razem</span>
+                        <br>
+                        <span class="grey-text">/ osoba</span>
+                        <div id="total">
+                            PLN0.00
+                        </div>
+                    </div>
+
+                    <br>
+                    <button id="reset">Reset</button>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>Przygotował Michał Chmiel</p>
+        </footer>
+        <script src="./js/app.js"></script>
+    </div>
+</body>
+
+</html>
