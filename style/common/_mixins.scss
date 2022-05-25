@@ -2,18 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #4169e1;
+    background-color: $royal-blue;
     font-family: "Space Mono", monospace;
 }
 
 @mixin logo {
     display: block;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
-  line-height: 50px;
+    margin: $center;
+    width: 100%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    line-height: 50px;
 }
 
 @mixin card {
@@ -21,9 +21,9 @@
     height: 100%;
     border-radius: 20px 20px 20px 20px;
     padding-bottom: 2em;
-    color: hsl(183, 100%, 15%);
+    color: $dark;
     width: 95%;
-    margin: 0 auto;
+    margin: $center;
 }
 
 @mixin input {
@@ -42,11 +42,11 @@
 }
 
 @mixin select-tip {
-        margin: 0 auto;
-        display: block;
-        max-width: 100%;
-        padding-bottom: 2em;
-        padding-top: 2em;
+    margin: $center;
+    display: block;
+    max-width: 100%;
+    padding-bottom: 2em;
+    padding-top: 2em;
 }
 
 @mixin tip-grid {
