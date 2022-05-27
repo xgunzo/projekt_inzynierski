@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $royal-blue;
+    background-color: $body-background-color;
     font-family: "Space Mono", monospace;
 }
 
@@ -20,16 +20,15 @@
     background-color: hsl(0, 0%, 100%);
     height: 100%;
     border-radius: 20px 20px 20px 20px;
-    padding-bottom: 2em;
-    color: $dark;
-    width: 95%;
+    padding: 2em 0;
+    color: $dark-text;
     margin: $center;
 }
 
 @mixin input {
     margin-top: 1em;
     padding: 1em 0;
-    width: 98%;
+    width: 100%;
     border: 0px;
     border-radius: 5px;
     background-color: #dce3fd;
@@ -64,4 +63,8 @@
     font-weight: 700;
     font-size: 25px;
     font-family: "Space Mono", monospace;
+}
+
+@mixin transition {
+    transition: ease-in-out 0.3s;
 }

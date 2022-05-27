@@ -8,6 +8,14 @@ body {
   font-family: "Space Mono", monospace;
 }
 
+.white-text {
+  color: white;
+}
+
+.grey-text {
+  color: #5e7a7d;
+}
+
 .logo {
   display: block;
   margin: 0 auto;
@@ -24,13 +32,62 @@ body {
   width: 85%;
 }
 
+input[type=number] {
+  font-family: "Space Mono", monospace;
+  color: #00494d;
+  font-size: 18px;
+  text-align: right;
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+  padding-right: 3    em;
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+  color: #5e7a7d;
+}
+
+input:-ms-input-placeholder {
+  padding-right: 3    em;
+  transform: scale(150%);
+  color: #5e7a7d;
+}
+
+input::-ms-input-placeholder {
+  padding-right: 3    em;
+  transform: scale(150%);
+  color: #5e7a7d;
+}
+
+input::placeholder {
+  padding-right: 3    em;
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+  color: #5e7a7d;
+}
+
+.placeholder {
+  position: absolute;
+  margin-top: -2.4em;
+  margin-left: 1em;
+}
+
+#custom-tip {
+  background: transparent;
+  outline: none;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  border: none;
+  text-align: center;
+}
+
 .card {
   background-color: white;
   height: 100%;
   border-radius: 20px 20px 20px 20px;
-  padding-bottom: 2em;
+  padding: 2em 0;
   color: #00494d;
-  width: 95%;
   margin: 0 auto;
 }
 
@@ -45,7 +102,7 @@ body {
 .card .bill #bill-input {
   margin-top: 1em;
   padding: 1em 0;
-  width: 98%;
+  width: 100%;
   border: 0px;
   border-radius: 5px;
   background-color: #dce3fd;
@@ -69,7 +126,7 @@ body {
 .card .number-of-people #number-of-people-input {
   margin-top: 1em;
   padding: 1em 0;
-  width: 98%;
+  width: 100%;
   border: 0px;
   border-radius: 5px;
   background-color: #dce3fd;
@@ -98,9 +155,16 @@ body {
   grid-gap: 1em;
 }
 
+.card .select-tip .grid-hover {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
 .card .select-tip .grid-hover:hover {
   background-color: #dce3fd;
   color: #00494d;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .card .select-tip .tip-grid {
@@ -108,6 +172,116 @@ body {
   height: 100%;
   border: 0px;
   cursor: pointer;
+}
+
+.card .select-tip .tip-grid #custom-tip::-webkit-input-placeholder {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 2rem;
+}
+
+.card .select-tip .tip-grid #custom-tip:-ms-input-placeholder {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 2rem;
+}
+
+.card .select-tip .tip-grid #custom-tip::-ms-input-placeholder {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 2rem;
+}
+
+.card .select-tip .tip-grid #custom-tip::placeholder {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 2rem;
+}
+
+.card .tip-calculator {
+  margin: 0;
+  padding: 2em 2.5em;
+  background-color: #14369b;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+.card .tip-calculator .tip-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .tip-calculator #tip-amount {
+  display: inline-block;
+  font-size: 28px;
+  color: #4169e1;
+  font-weight: 700;
+}
+
+.card .tip-calculator .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .tip-calculator #total {
+  display: inline-block;
+  font-size: 28px;
+  color: #4169e1;
+  font-weight: 700;
+}
+
+.card .tip-calculator #reset {
+  margin-top: 1em;
+  padding: 1em 0;
+  width: 98%;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #204ac8;
+  color: white;
+  /*background-color: hsl(172, 67%, 45%);*/
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.card .tip-calculator #reset:hover {
+  background-color: #dce3fd;
+  color: #00494d;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .grid1,
@@ -122,32 +296,13 @@ body {
   font-weight: 700;
   font-size: 25px;
   font-family: "Space Mono", monospace;
+  margin: 2em 0;
 }
 
-.grid1 {
-  background-color: #204ac8;
-  text-align: center;
-  color: white;
-}
-
-.grid2 {
-  background-color: #204ac8;
-  text-align: center;
-  color: white;
-}
-
-.grid3 {
-  background-color: #204ac8;
-  text-align: center;
-  color: white;
-}
-
-.grid4 {
-  background-color: #204ac8;
-  text-align: center;
-  color: white;
-}
-
+.grid1,
+.grid2,
+.grid3,
+.grid4,
 .grid5 {
   background-color: #204ac8;
   text-align: center;
@@ -161,156 +316,69 @@ body {
   color: #00494d;
 }
 
-#custom-tip::-webkit-input-placeholder {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding-bottom: 2em;
-  padding-left: 2.3em;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-#custom-tip:-ms-input-placeholder {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding-bottom: 2em;
-  padding-left: 2.3em;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-#custom-tip::-ms-input-placeholder {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding-bottom: 2em;
-  padding-left: 2.3em;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-#custom-tip::placeholder {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding-bottom: 2em;
-  padding-left: 2.3em;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.tip-calculator {
-  margin-top: 2em;
-  padding: 2em 1.5em;
-  background-color: #14369b;
-  border-radius: 5px;
-}
-
-.white-text {
-  color: white;
-}
-
-.grey-text {
-  color: #5e7a7d;
-}
-
-.tip-amount {
-  display: block;
-}
-
-#tip-amount {
-  display: inline-block;
-  padding-left: 3em;
-  font-size: 28px;
-  color: #4169e1;
-  font-weight: 700;
-}
-
-.total {
-  display: block;
-}
-
-#total {
-  display: inline-block;
-  padding-left: 3em;
-  font-size: 28px;
-  color: #4169e1;
-  font-weight: 700;
-}
-
-#reset {
-  margin-top: 1em;
-  padding: 1em 0;
-  width: 98%;
-  border: 0px;
-  border-radius: 5px;
-  background-color: #204ac8;
-  color: #00494d;
-  /*background-color: hsl(172, 67%, 45%);*/
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-#reset:hover {
-  background-color: #dce3fd;
-}
-
-input[type=number] {
-  font-family: "Space Mono", monospace;
-  color: #00494d;
-  font-size: 18px;
-  text-align: right;
-  cursor: pointer;
-}
-
-input::-webkit-input-placeholder {
-  padding-right: 5em;
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
-  color: #5e7a7d;
-}
-
-input:-ms-input-placeholder {
-  padding-right: 5em;
-  transform: scale(150%);
-  color: #5e7a7d;
-}
-
-input::-ms-input-placeholder {
-  padding-right: 5em;
-  transform: scale(150%);
-  color: #5e7a7d;
-}
-
-input::placeholder {
-  padding-right: 5em;
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
-  color: #5e7a7d;
-}
-
-.placeholder {
-  position: absolute;
-  margin-top: -2.4em;
-  margin-left: 1em;
-}
-
 footer {
   margin: 0 auto;
   text-align: center;
   color: white;
 }
 
+@media screen and (min-width: 425px) {
+  input::-webkit-input-placeholder {
+    padding-right: 4rem;
+  }
+  input:-ms-input-placeholder {
+    padding-right: 4rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 4rem;
+  }
+  input::placeholder {
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  input::-webkit-input-placeholder {
+    padding-right: 5rem;
+  }
+  input:-ms-input-placeholder {
+    padding-right: 5rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 5rem;
+  }
+  input::placeholder {
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  input::-webkit-input-placeholder {
+    padding-right: 7rem;
+  }
+  input:-ms-input-placeholder {
+    padding-right: 7rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 7rem;
+  }
+  input::placeholder {
+    padding-right: 7rem;
+  }
+}
+
 @media screen and (min-width: 828px) {
-  #custom-tip {
-    width: 116%;
-    margin-top: -0.5em;
-    margin-left: -1em;
-    height: 165%;
+  input::-webkit-input-placeholder {
+    padding-right: 9rem;
+  }
+  input:-ms-input-placeholder {
+    padding-right: 9rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 9rem;
+  }
+  input::placeholder {
+    padding-right: 9rem;
   }
   #custom-tip::-webkit-input-placeholder {
     padding-left: 5em;
@@ -339,21 +407,21 @@ footer {
     font-size: 18px;
     padding-left: 4.5em;
     padding-bottom: 0;
-  }
-  #tip-amount {
-    padding-left: 16em;
-  }
-  #total {
-    padding-left: 16em;
   }
 }
 
 @media screen and (min-width: 1080px) {
-  #custom-tip {
-    width: 112%;
-    margin-top: -0.5em;
-    margin-left: -1em;
-    height: 165%;
+  input::-webkit-input-placeholder {
+    padding-right: 11rem;
+  }
+  input:-ms-input-placeholder {
+    padding-right: 11rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 11rem;
+  }
+  input::placeholder {
+    padding-right: 11rem;
   }
   #custom-tip::-webkit-input-placeholder {
     padding-left: 5em;
@@ -371,39 +439,43 @@ footer {
     padding-left: 5em;
     padding-bottom: 0.5em;
   }
-  #tip-amount {
-    padding-left: 23em;
+}
+
+@media screen and (min-width: 1300px) {
+  input::-webkit-input-placeholder {
+    padding-right: 13rem;
   }
-  #total {
-    padding-left: 23em;
+  input:-ms-input-placeholder {
+    padding-right: 13rem;
+  }
+  input::-ms-input-placeholder {
+    padding-right: 13rem;
+  }
+  input::placeholder {
+    padding-right: 13rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .logo {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  input::-webkit-input-placeholder {
+    padding-right: 8rem;
   }
-  .logo img {
-    padding-bottom: 5em;
+  input:-ms-input-placeholder {
+    padding-right: 8rem;
   }
-  .wrapper {
-    margin: 0 auto;
-    display: block;
-    max-width: 75%;
+  input::-ms-input-placeholder {
+    padding-right: 8rem;
+  }
+  input::placeholder {
+    padding-right: 8rem;
   }
   .card {
-    margin-top: 0;
-    width: 100%;
-    border-radius: 20px 20px 20px 20px;
-    padding-bottom: 2em;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
   #mobile-wrapper {
+    width: 95%;
     margin: 0 auto;
-    display: block;
-    width: 90%;
   }
   .card #mobile-wrapper {
     display: -ms-grid;
@@ -412,59 +484,12 @@ footer {
         grid-template-columns: repeat(2, 0.5fr);
     -ms-grid-rows: (0.5fr)[3];
         grid-template-rows: repeat(3, 0.5fr);
-    grid-column-gap: 0.5em;
+    grid-column-gap: 5rem;
     grid-row-gap: 0px;
     padding-bottom: 0.1em;
   }
-  .bill {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-area: 1 / 1 / 2 / 2;
+  .bill, #number-of-people-input {
     width: 100%;
-    margin-left: 0em;
-    padding-top: 2.5em;
-    padding-bottom: 3em;
-  }
-  #bill-input {
-    margin-top: 1em;
-    padding: 1em 0;
-    width: 100%;
-  }
-  .number-of-people {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-area: 2 / 1 / 3 / 2;
-    width: 100%;
-  }
-  #number-of-people-input {
-    margin-top: 1em;
-    padding: 1em 0;
-    width: 98%;
-    border: 0px;
-    border-radius: 5px;
-  }
-  #error {
-    padding-left: 12em;
-  }
-  .select-tip {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-area: 3 / 1 / 4 / 2;
-    margin-left: 0em;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    padding-bottom: 2em;
-    padding-top: 1em;
-  }
-  .tip-grid {
-    height: 70%;
   }
   .select-tip .tip-grid {
     padding-top: 1em;
@@ -485,51 +510,7 @@ footer {
     padding: 0em 1em;
     padding-top: 0.5em;
     font-size: 30px;
-  }
-  #custom-tip {
-    width: 131%;
-    margin-top: -0.6em;
-    margin-left: -1.2em;
-    border-radius: 5px;
-    height: 125%;
-    font-size: 25px;
-    border: none;
-  }
-  #custom-tip::-webkit-input-placeholder {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding-left: 2.3em;
-    padding-bottom: 0.6em;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  #custom-tip:-ms-input-placeholder {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding-left: 2.3em;
-    padding-bottom: 0.6em;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  #custom-tip::-ms-input-placeholder {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding-left: 2.3em;
-    padding-bottom: 0.6em;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  #custom-tip::placeholder {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding-left: 2.3em;
-    padding-bottom: 0.6em;
-    font-weight: 700;
-    font-size: 18px;
+    margin: 0;
   }
   .tip-calculator {
     -ms-grid-row: 1;
@@ -543,25 +524,6 @@ footer {
     width: 28.5rem;
     border-radius: 20px;
   }
-  #tip-amount {
-    display: inline-block;
-    padding-left: 6em;
-    font-size: 28px;
-    -webkit-transform: scale(150%);
-            transform: scale(150%);
-  }
-  .total {
-    padding-top: 2.5em;
-  }
-  #total {
-    padding-left: 6em;
-    font-size: 28px;
-    -webkit-transform: scale(150%);
-            transform: scale(150%);
-  }
-  #reset {
-    margin-top: 15em;
-  }
   footer p {
     padding: 0;
     margin: 0;
@@ -570,34 +532,13 @@ footer {
 
 @media screen and (min-width: 1510px) {
   .tip-calculator {
-    width: 31.5rem;
-  }
-  #tip-amount {
-    padding-left: 7em;
-  }
-  #total {
-    padding-left: 7em;
-  }
-  #reset {
-    width: 100%;
+    width: 32.5rem;
   }
 }
 
 @media screen and (min-width: 1700px) {
   .tip-calculator {
-    width: 42rem;
-  }
-  .white-text {
-    font-size: 22px;
-  }
-  #tip-amount {
-    padding-left: 12em;
-  }
-  #total {
-    padding-left: 12em;
-  }
-  #reset {
-    width: 100%;
+    width: 43rem;
   }
 }
 
@@ -607,19 +548,10 @@ footer {
     width: 80%;
   }
   .tip-calculator {
-    width: 33rem;
+    width: 34rem;
   }
   .white-text {
     font-size: 22px;
-  }
-  #tip-amount {
-    padding-left: 8em;
-  }
-  #total {
-    padding-left: 8em;
-  }
-  #reset {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

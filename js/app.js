@@ -25,8 +25,8 @@ window.onload = function () {
         if (x == 0) {
             numberOfPeople.style.outlineColor = "red";
             error.style.display = "inline";
-            tipAmount.innerHTML = "PLN0.00";
-            total.innerHTML = "PLN0.00";
+            tipAmount.innerHTML = "0.00 PLN";
+            total.innerHTML = "0.00 PLN";
         } else {
             numberOfPeople.style.outlineColor = "#204ac8";
             error.style.display = "none";
@@ -38,8 +38,8 @@ window.onload = function () {
         bill.value = " ";
         numberOfPeople.value = " ";
         customPercentCalc.value = " ";
-        tipAmount.innerHTML = "PLN0.00";
-        total.innerHTML = "PLN0.00";
+        tipAmount.innerHTML = "0.00 PLN";
+            total.innerHTML = "0.00 PLN";
         reset.style.backgroundColor = "#204ac8";
 
         fivePercent.style.backgroundColor = "#204ac8";
@@ -82,7 +82,7 @@ window.onload = function () {
 
             fivePercent.addEventListener("click", function () {
                 let calculate = (parseFloat(bill.value) * 1.05) / numberOfPeople.value;
-                total.innerHTML = "PLN" + calculate.toFixed(2);
+                total.innerHTML = calculate.toFixed(2) + " PLN";
 
                 fivePercent.style.backgroundColor = "#dce3fd";
                 tenPercent.style.backgroundColor = "#204ac8";
@@ -102,7 +102,7 @@ window.onload = function () {
 
             tenPercent.addEventListener("click", function () {
                 let calculate = (parseFloat(bill.value) * 1.1) / numberOfPeople.value;
-                total.innerHTML = "PLN" + calculate.toFixed(2);
+                total.innerHTML = calculate.toFixed(2) + " PLN";
                 fivePercent.style.backgroundColor = "#204ac8";
                 tenPercent.style.backgroundColor = "#dce3fd";
                 fifteenPercent.style.backgroundColor = "#204ac8";
@@ -120,7 +120,7 @@ window.onload = function () {
 
             fifteenPercent.addEventListener("click", function () {
                 let calculate = (parseFloat(bill.value) * 1.15) / numberOfPeople.value;
-                total.innerHTML = "PLN" + calculate.toFixed(2);
+                total.innerHTML = calculate.toFixed(2) + " PLN";
                 fivePercent.style.backgroundColor = "#204ac8";
                 tenPercent.style.backgroundColor = "#204ac8";
                 fifteenPercent.style.backgroundColor = "#dce3fd";
@@ -138,7 +138,7 @@ window.onload = function () {
 
             twentyFivePercent.addEventListener("click", function () {
                 let calculate = (parseFloat(bill.value) * 1.25) / numberOfPeople.value;
-                total.innerHTML = "PLN" + calculate.toFixed(2);
+                total.innerHTML = calculate.toFixed(2) + " PLN";
                 fivePercent.style.backgroundColor = "#204ac8";
                 tenPercent.style.backgroundColor = "#204ac8";
                 fifteenPercent.style.backgroundColor = "#204ac8";
@@ -156,7 +156,7 @@ window.onload = function () {
 
             fiftyPercent.addEventListener("click", function () {
                 let calculate = (parseFloat(bill.value) * 1.50) / numberOfPeople.value;
-                total.innerHTML = "PLN" + calculate.toFixed(2);
+                total.innerHTML = calculate.toFixed(2) + " PLN";
                 fivePercent.style.backgroundColor = "#204ac8";
                 tenPercent.style.backgroundColor = "#204ac8";
                 fifteenPercent.style.backgroundColor = "#204ac8";
@@ -191,7 +191,7 @@ window.onload = function () {
                 customPercentCalc.addEventListener("keyup", function () {
                     let customValue = parseFloat((customPercentCalc.value * 0.01) + 1.0);
                     let calculate = (parseFloat(bill.value) * customValue) / numberOfPeople.value;
-                    total.innerHTML = "PLN" + calculate.toFixed(2);
+                    total.innerHTML = calculate.toFixed(2) + " PLN";
                 })
 
 
@@ -206,34 +206,34 @@ window.onload = function () {
 
         fivePercent.addEventListener("click", function () {
             let calculate = ((parseFloat(bill.value) * 1.05) - bill.value) / numberOfPeople.value;
-            tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+            tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
         })
 
         tenPercent.addEventListener("click", function () {
             let calculate = ((parseFloat(bill.value) * 1.1) - bill.value) / numberOfPeople.value;
-            tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+            tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
         })
 
         fifteenPercent.addEventListener("click", function () {
             let calculate = ((parseFloat(bill.value) * 1.15) - bill.value) / numberOfPeople.value;
-            tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+            tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
         })
 
         twentyFivePercent.addEventListener("click", function () {
             let calculate = ((parseFloat(bill.value) * 1.25) - bill.value) / numberOfPeople.value;
-            tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+            tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
         })
 
         fiftyPercent.addEventListener("click", function () {
             let calculate = ((parseFloat(bill.value) * 1.50) - bill.value) / numberOfPeople.value;
-            tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+            tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
         })
 
         customPercentCalc.addEventListener("click", function () {
             customPercentCalc.addEventListener("keyup", function () {
                 let customValue = parseFloat((customPercentCalc.value * 0.01) + 1.0);
                 let calculate = ((parseFloat(bill.value) * customValue) - bill.value) / numberOfPeople.value;
-                tipAmount.innerHTML = "PLN" + calculate.toFixed(2);
+                tipAmount.innerHTML = calculate.toFixed(2) + " PLN";
             })
 
         })
