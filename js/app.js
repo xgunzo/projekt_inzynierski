@@ -39,7 +39,7 @@ window.onload = function () {
         numberOfPeople.value = " ";
         customPercentCalc.value = " ";
         tipAmount.innerHTML = "0.00 PLN";
-            total.innerHTML = "0.00 PLN";
+        total.innerHTML = "0.00 PLN";
         reset.style.backgroundColor = "#204ac8";
 
         fivePercent.style.backgroundColor = "#204ac8";
@@ -47,7 +47,7 @@ window.onload = function () {
         fifteenPercent.style.backgroundColor = "#204ac8";
         twentyFivePercent.style.backgroundColor = "#204ac8";
         fiftyPercent.style.backgroundColor = "#204ac8";
-        customPercent.style.backgroundColor = "#204ac8";
+        customPercent.style.backgroundColor = "#dce3fd";
 
 
         fivePercent.style.color = "hsl(0, 0%, 100%)";
@@ -89,7 +89,7 @@ window.onload = function () {
                 fifteenPercent.style.backgroundColor = "#204ac8";
                 twentyFivePercent.style.backgroundColor = "#204ac8";
                 fiftyPercent.style.backgroundColor = "#204ac8";
-                customPercent.style.backgroundColor = "#204ac8";
+                customPercent.style.backgroundColor = "#dce3fd";
 
 
                 fivePercent.style.color = "hsl(183, 100%, 15%)";
@@ -108,7 +108,7 @@ window.onload = function () {
                 fifteenPercent.style.backgroundColor = "#204ac8";
                 twentyFivePercent.style.backgroundColor = "#204ac8";
                 fiftyPercent.style.backgroundColor = "#204ac8";
-                customPercent.style.backgroundColor = "#204ac8";
+                customPercent.style.backgroundColor = "#dce3fd";
 
                 fivePercent.style.color = "hsl(0, 0%, 100%)";
                 tenPercent.style.color = "hsl(183, 100%, 15%)";
@@ -126,7 +126,7 @@ window.onload = function () {
                 fifteenPercent.style.backgroundColor = "#dce3fd";
                 twentyFivePercent.style.backgroundColor = "#204ac8";
                 fiftyPercent.style.backgroundColor = "#204ac8";
-                customPercent.style.backgroundColor = "#204ac8";
+                customPercent.style.backgroundColor = "#dce3fd";
 
                 fivePercent.style.color = "hsl(0, 0%, 100%)";
                 tenPercent.style.color = "hsl(0, 0%, 100%)";
@@ -144,7 +144,7 @@ window.onload = function () {
                 fifteenPercent.style.backgroundColor = "#204ac8";
                 twentyFivePercent.style.backgroundColor = "#dce3fd";
                 fiftyPercent.style.backgroundColor = "#204ac8";
-                customPercent.style.backgroundColor = "#204ac8";
+                customPercent.style.backgroundColor = "#dce3fd";
 
                 fivePercent.style.color = "hsl(0, 0%, 100%)";
                 tenPercent.style.color = "hsl(0, 0%, 100%)";
@@ -162,7 +162,7 @@ window.onload = function () {
                 fifteenPercent.style.backgroundColor = "#204ac8";
                 twentyFivePercent.style.backgroundColor = "#204ac8";
                 fiftyPercent.style.backgroundColor = "#dce3fd";
-                customPercent.style.backgroundColor = "#204ac8";
+                customPercent.style.backgroundColor = "#dce3fd";
 
                 fivePercent.style.color = "hsl(0, 0%, 100%)";
                 tenPercent.style.color = "hsl(0, 0%, 100%)";
