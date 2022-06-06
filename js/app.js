@@ -15,7 +15,11 @@ window.onload = function () {
     const customPercent = document.querySelector(".grid6");
     const customPercentCalc = document.querySelector("#custom-tip");
 
-    // Funkcja odbywająca się wraz z wciśnieciem klawisza w polu "Liczba osób"
+    /*
+    Funkcja, która odbywa się na kliknięcie klawisza w polu
+    "Liczba osób". Polega ona na tym, że podczas wpisania liczby 0
+    zostanie poakzany błąd
+    */
     numberOfPeople.addEventListener("keydown", function () {
 
         let x = parseInt(numberOfPeople.value);
@@ -33,7 +37,11 @@ window.onload = function () {
         }
     })
 
-    // Funkcja, która odbywa się podczas kliknięcia w przycisk reset
+    /*
+    Funkcja, która odbywa się podczas kliknięcia w przycisk reset. 
+    Polega na tym, że resetuje wszystkie wartości naniesione 
+    przez użytkownika
+    */
     reset.addEventListener("click", function () {
         bill.value = " ";
         numberOfPeople.value = " ";
@@ -58,7 +66,11 @@ window.onload = function () {
 
     })
 
-    // Funkcja odbywająca się wraz z wciśnieciem klawisza w polu "Rachunek", jeżeli wpiszemy wartość to kolor tła przycisku reset zmienia się
+    /*
+    Funkcja odbywająca się wraz z wciśnieciem klawisza w polu 
+    "Rachunek", jeżeli wpiszemy jakąkolwiek wartość to kolor tła przycisku reset 
+    zmienia się
+    */
     bill.addEventListener("keydown", function () {
         if (bill.value !== billPlacehoder || numberOfPeople.value !== numberOfPeoplePlaceholder) {
             reset.style.backgroundColor = "#4169e1";
@@ -75,8 +87,10 @@ window.onload = function () {
         }
     })
 
-
-    //Obliczamy całkowity koszt "Razem"
+    /*
+    Funkcja służąca do obliczania całkowitego kosztu - "Razem"
+    Odbywa się ona po kliknięciu dowolnego % napiwku lub wpisaniu własnego
+    */
     bill.addEventListener("keyup", function () {
         numberOfPeople.addEventListener("keyup", function () {
 
@@ -201,7 +215,10 @@ window.onload = function () {
     })
 
 
-    //Obliczanie kwoty napiwku
+    /*
+    Funckja obliczająca kwotę napiwku.
+    Odbywa się ona po kliknięciu dowolnego % napiwku lub wpisaniu własnego
+    */
     bill.addEventListener("keyup", function () {
 
         fivePercent.addEventListener("click", function () {
